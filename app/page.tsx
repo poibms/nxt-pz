@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Container, Filters, Title, TopBar} from '@/components/shared';
+import { Container, Filters, ProductsGroupList, Title, TopBar } from '@/components/shared';
 
 export default function Home() {
   return (
@@ -12,18 +12,28 @@ export default function Home() {
       <TopBar />
 
       <Container className={'mt-10 pb-[14px]'}>
-        <div className={'flex gap-[60px]'}>
-
+        <div className={'flex gap-[80px]'}>
           <div className={'w-[250px]'}>
-            <Filters/>
+            <Filters />
           </div>
 
           <div className={'flex-1'}>
             <div className={'flex flex-col gap-16'}>
-              Список товаров
+              <ProductsGroupList
+                items={[
+                  {
+                    id: 1,
+                    name: 'Бургер-пицца',
+                    imageUrl:
+                      'https://media.dodostatic.net/image/r:584x584/11EE7D5F0C8EA951B957406D02CA3C4D.avif',
+                    items: [{ price: 550 }],
+                  },
+                ]}
+                title={'Пиццы'}
+                categoryId={1}
+              />
             </div>
           </div>
-
         </div>
       </Container>
     </>
