@@ -32,6 +32,19 @@ export default function Home() {
                 title={'Пиццы'}
                 categoryId={1}
               />
+              <ProductsGroupList
+                items={[
+                  {
+                    id: 1,
+                    name: 'Бургер-комбо',
+                    imageUrl:
+                      'https://media.dodostatic.net/image/r:584x584/11EE7D5F0C8EA951B957406D02CA3C4D.avif',
+                    items: [{ price: 550 }],
+                  },
+                ]}
+                title={'Комбо'}
+                categoryId={2}
+              />
             </div>
           </div>
         </div>
